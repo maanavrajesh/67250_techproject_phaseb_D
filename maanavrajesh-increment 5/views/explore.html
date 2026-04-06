@@ -8,15 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore - MonoMuse</title>
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="../static/script.js" defer></script>
 </head>
 <body class="inside-page" onload="addYear()">
     <div class="container">
         <header class="home-topbar">
-            <a class="brand" href="../index.html">
-                <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
-                <span class="brand-name">MonoMuse</span>
-            </a>
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="../index.html">
+                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
             <nav class="nav_bar">
                 <a href="../index.html">Home</a>
                 <a href="explore.html">Explore</a>
@@ -38,7 +43,12 @@
                 </div>
             </section>
             <section class="side-photo">
-                <img src="../static/Interior-National-Gallery-of-Art-Washington-DC.webp" alt="Museum Interior">
+                <div class="explore-image-box">
+                    <img src="../static/Interior-National-Gallery-of-Art-Washington-DC.webp" alt="Museum Interior">
+                </div>
+                <div class="map-box">
+                    <div id="map"></div>
+                </div>
             </section>
         </main>
         <footer class="footer">

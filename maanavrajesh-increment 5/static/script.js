@@ -42,6 +42,15 @@ function ActiveNav() {
 
 ActiveNav();
 
+function toggleMobileNav(button) {
+    const header = button.parentElement.parentElement;
+    const nav = header.querySelector('.nav_bar');
+
+    if (nav) {
+        nav.classList.toggle('responsive');
+    }
+}
+
 function showPurchaseForm(date) {
     window.location.href = 'checkout.html?date=' + encodeURIComponent(date);
 }
@@ -56,6 +65,21 @@ function loadSelectedDate() {
     if (date) {
         selectedDate.value = date;
     }
+}
+
+function loadMap() {
+    const mapElement = document.getElementById('map');
+    if (!mapElement || typeof L === 'undefined') return;
+
+    const map = L.map('map').setView([40.4433, -79.9436], 14);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([40.4433, -79.9436]).addTo(map)
+        .bindPopup('MonoMuse location')
+        .openPopup();
 }
 
 function submitPurchase() {
@@ -80,4 +104,6 @@ document.addEventListener('DOMContentLoaded', function () {
             readMoreBtn.style.display = 'inline-block';
         });
     }
+
+    loadMap();
 });

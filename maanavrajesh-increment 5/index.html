@@ -14,10 +14,13 @@
 <body class="home-page" onload="addYear(); if (document.getElementById('greeting')) greeting(new Date().getHours());">
     <div class="container">
         <header class="home-topbar">
-            <a class="brand" href="index.html">
-                <img id="logo" src="./static/monomuse.png" alt="MonoMuse Museum Logo" />
-                <span class="brand-name">MonoMuse</span>
-            </a>
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="index.html">
+                    <img id="logo" src="./static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
             <nav class="nav_bar">
                 <a href="index.html">Home</a>
                 <a href="views/explore.html">Explore</a>
@@ -40,6 +43,11 @@
                 <div class="hero-toggle">
                     <button id="readMore">Read More</button>
                     <button id="readLess" style="display: none;">Read Less</button>
+                </div>
+            </section>
+            <section class="hero-media">
+                <div class="video-frame">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JG9hZgnPGsQ?si=Xxt2UafgBu_HUirg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </section>
         </main>

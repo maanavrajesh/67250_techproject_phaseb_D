@@ -13,10 +13,13 @@
 <body class="inside-page" onload="addYear()">
     <div class="container">
         <header class="home-topbar">
-            <a class="brand" href="../index.html">
-                <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
-                <span class="brand-name">MonoMuse</span>
-            </a>
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="../index.html">
+                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
             <nav class="nav_bar">
                 <a href="../index.html">Home</a>
                 <a href="explore.html">Explore</a>

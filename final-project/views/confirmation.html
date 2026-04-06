@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Maanav Rajesh">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body class="inside-page" onload="addYear(); loadConfirmation();">
+    <div class="container">
+        <header class="home-topbar">
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="../index.html">
+                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
+            <nav class="nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="donor.html">Donor</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <a class="nav_cta" href="tickets.html">Buy Tickets</a>
+        </header>
+        <main class="main content-box">
+            <h3>Order Confirmation</h3>
+            <div class="confirmation-box">
+                <p id="confirmationMessage">Your order has been placed.</p>
+                <p><strong>Visit Date:</strong> <span id="confirmDate"></span></p>
+                <p><strong>Ticket Type:</strong> <span id="confirmType"></span></p>
+                <p><strong>Quantity:</strong> <span id="confirmQuantity"></span></p>
+                <p><strong>Total Cost:</strong> <span id="confirmTotal"></span></p>
+            </div>
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

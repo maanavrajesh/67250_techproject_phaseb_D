@@ -13,15 +13,19 @@
 <body class="inside-page" onload="addYear()">
     <div class="container">
         <header class="home-topbar">
-            <a class="brand" href="../index.html">
-                <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
-                <span class="brand-name">MonoMuse</span>
-            </a>
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="../index.html">
+                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
             <nav class="nav_bar">
                 <a href="../index.html">Home</a>
                 <a href="explore.html">Explore</a>
                 <a href="exhibitions.html">Exhibitions</a>
                 <a href="tickets.html">Tickets</a>
+                <a href="donor.html">Donor</a>
                 <a href="checkout.html">Checkout</a>
             </nav>
             <a class="nav_cta" href="tickets.html">Buy Tickets</a>
@@ -69,32 +73,32 @@
                     <tr>
                         <td>April 5, 2026</td>
                         <td>Sunday</td>
-                        <td>Available</td>
-                        <td><button class="buyNowBtn" onclick="showPurchaseForm('April 5, 2026')">Buy Now</button></td>
+                        <td>Open 10:00 AM - 5:00 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-05')">Buy Now</button></td>
                     </tr>
                     <tr>
                         <td>April 10, 2026</td>
                         <td>Friday</td>
-                        <td>Available</td>
-                        <td><button class="buyNowBtn" onclick="showPurchaseForm('April 10, 2026')">Buy Now</button></td>
+                        <td>Open 9:00 AM - 6:00 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-10')">Buy Now</button></td>
                     </tr>
                     <tr>
                         <td>April 15, 2026</td>
                         <td>Wednesday</td>
-                        <td>Available</td>
-                        <td><button class="buyNowBtn" onclick="showPurchaseForm('April 15, 2026')">Buy Now</button></td>
+                        <td>Open 11:00 AM - 4:00 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-15')">Buy Now</button></td>
                     </tr>
                     <tr>
                         <td>April 20, 2026</td>
                         <td>Monday</td>
-                        <td>Available</td>
-                        <td><button class="buyNowBtn" onclick="showPurchaseForm('April 20, 2026')">Buy Now</button></td>
+                        <td>Open 10:30 AM - 5:30 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-20')">Buy Now</button></td>
                     </tr>
                     <tr>
                         <td>April 25, 2026</td>
                         <td>Saturday</td>
-                        <td>Available</td>
-                        <td><button class="buyNowBtn" onclick="showPurchaseForm('April 25, 2026')">Buy Now</button></td>
+                        <td>Open 9:30 AM - 6:30 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-25')">Buy Now</button></td>
                     </tr>
                 </tbody>
             </table>

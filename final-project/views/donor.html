@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Maanav Rajesh">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Options - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body class="inside-page" onload="addYear()">
+    <div class="container">
+        <header class="home-topbar">
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="../index.html">
+                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
+            <nav class="nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="donor.html">Donor</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <a class="nav_cta" href="tickets.html">Buy Tickets</a>
+        </header>
+        <main class="main content-box">
+            <h3>Membership Options</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Support Level</th>
+                        <th>Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Guest Supporter</td>
+                        <td>$25</td>
+                        <td>Helps support museum programs and student workshops</td>
+                    </tr>
+                    <tr>
+                        <td>Student Member</td>
+                        <td>$15</td>
+                        <td>Discounted events, newsletter updates, and early event notices</td>
+                    </tr>
+                    <tr>
+                        <td>Full Member</td>
+                        <td>$50</td>
+                        <td>Free admission days, member events, and special exhibition updates</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Donation Options</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Donation</th>
+                        <th>Use</th>
+                        <th>Suggested Supporter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$10</td>
+                        <td>Supports museum materials and printed guides</td>
+                        <td>Guest</td>
+                    </tr>
+                    <tr>
+                        <td>$25</td>
+                        <td>Supports student programs and creative workshops</td>
+                        <td>Student</td>
+                    </tr>
+                    <tr>
+                        <td>$50+</td>
+                        <td>Supports exhibitions, technology, and future programming</td>
+                        <td>Member</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="page-text center-text">Visitors, students, and members can all support MonoMuse by joining as a member or making a donation. Every contribution helps keep exhibitions and programs running.</p>
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
