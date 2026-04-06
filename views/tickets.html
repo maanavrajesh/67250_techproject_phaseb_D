@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Maanav Rajesh">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body class="inside-page" onload="addYear()">
+    <div class="container">
+        <header class="home-topbar">
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="../index.html">
+                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
+            <nav class="nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="donor.html">Donor</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <a class="nav_cta" href="tickets.html">Buy Tickets</a>
+        </header>
+        <main class="main content-box">
+            <h3>Ticket Pricing</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket Type</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>General</td>
+                        <td>Standard admission ticket for adults</td>
+                        <td>$20</td>
+                    </tr>
+                    <tr>
+                        <td>Student</td>
+                        <td>Discounted ticket for students with valid ID</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>Member</td>
+                        <td>Special rate for museum members</td>
+                        <td>$10</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Available Dates - April 2026</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Availability</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>April 5, 2026</td>
+                        <td>Sunday</td>
+                        <td>Open 10:00 AM - 5:00 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-05')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 10, 2026</td>
+                        <td>Friday</td>
+                        <td>Open 9:00 AM - 6:00 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-10')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 15, 2026</td>
+                        <td>Wednesday</td>
+                        <td>Open 11:00 AM - 4:00 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-15')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 20, 2026</td>
+                        <td>Monday</td>
+                        <td>Open 10:30 AM - 5:30 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-20')">Buy Now</button></td>
+                    </tr>
+                    <tr>
+                        <td>April 25, 2026</td>
+                        <td>Saturday</td>
+                        <td>Open 9:30 AM - 6:30 PM</td>
+                        <td><button class="buyNowBtn" onclick="showPurchaseForm('2026-04-25')">Buy Now</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

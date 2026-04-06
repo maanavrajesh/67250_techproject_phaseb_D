@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Maanav Rajesh">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body class="inside-page" onload="addYear()">
+    <div class="container">
+        <header class="home-topbar">
+            <div class="topbar-left">
+                <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
+                <a class="brand" href="../index.html">
+                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <span class="brand-name">MonoMuse</span>
+                </a>
+            </div>
+            <nav class="nav_bar">
+                <a href="../index.html">Home</a>
+                <a href="explore.html">Explore</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="tickets.html">Tickets</a>
+                <a href="donor.html">Donor</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <a class="nav_cta" href="tickets.html">Buy Tickets</a>
+        </header>
+        <main class="main exhibitions-main">
+            <section class="exhibit-column">
+                <div class="exhibit-photo">
+                    <img src="../static/ex 1.jpg" alt="Exhibition 1 photo">
+                </div>
+                <h3>Exhibition 1</h3>
+                <p class="page-text">Digital Dreams: Art in the Age of Technology looks at how artists use digital tools to create new kinds of work. The exhibition focuses on projection, motion, sound, and immersive design.</p>
+            </section>
+            <div class="middle-strip"></div>
+            <section class="exhibit-column">
+                <div class="exhibit-photo">
+                    <img src="../static/ex 2.jpg" alt="Exhibition 2 photo">
+                </div>
+                <h3>Exhibition 2</h3>
+                <p class="page-text">Interactive Media Lab invites visitors to take part in the art itself. This section is focused on hands-on experiences where the audience becomes part of the exhibition.</p>
+            </section>
+        </main>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
