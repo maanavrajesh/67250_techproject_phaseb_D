@@ -8,17 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore - MonoMuse</title>
     <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
     <script src="../static/script.js" defer></script>
 </head>
 <body class="inside-page" onload="addYear()">
     <div class="container">
+        <!-- Main site navigation -->
         <header class="home-topbar">
             <div class="topbar-left">
                 <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
                 <a class="brand" href="../index.html">
-                    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <img id="logo" src="../static/monomuse.png" alt="Museum logo" />
                     <span class="brand-name">MonoMuse</span>
                 </a>
             </div>
@@ -32,12 +34,19 @@
             </nav>
             <a class="nav_cta" href="tickets.html">Buy Tickets</a>
         </header>
+        <!-- Explore page content -->
         <main class="main simple-hero">
             <section class="hero-panel">
                 <p class="hero-kicker">Explore MonoMuse</p>
                 <h1>See what makes the museum different</h1>
                 <p class="page-text">MonoMuse brings together art, technology, and creativity in one space. Every visit is built around new media, interactive work, and exhibitions that make people look at art in a different way.</p>
                 <p class="page-text">Visitors can walk through digital galleries, learn about artists using new tools, and experience exhibits that mix screens, sound, projection, and design.</p>
+                <button class="accordion-btn" id="exploreAccordionBtn">Read More About MonoMuse</button>
+                <div class="accordion-panel">
+                    <p class="page-text">MonoMuse also focuses on student learning, hands-on technology, and events that help visitors understand how museums are changing over time.</p>
+                </div>
+                <button class="fact-btn" id="factButton">Show Museum Fact</button>
+                <p class="fact-text" id="factText">Click the button to see a quick museum fact.</p>
                 <div class="hero-actions">
                     <a class="hero-btn hero-btn-solid" href="exhibitions.html">View Exhibitions</a>
                     <a class="hero-btn hero-btn-outline" href="tickets.html">Plan Your Visit</a>
@@ -45,8 +54,9 @@
             </section>
             <section class="side-photo">
                 <div class="explore-image-box">
-                    <img src="../static/Interior-National-Gallery-of-Art-Washington-DC.webp" alt="Museum Interior">
+                    <img src="../static/Interior-National-Gallery-of-Art-Washington-DC.webp" alt="Museum hall">
                 </div>
+                <p class="media-source">Image source: <a href="https://www.britannica.com/topic/museum-cultural-institution" target="_blank">Britannica</a></p>
                 <div class="map-box">
                     <div id="map"></div>
                 </div>

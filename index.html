@@ -13,11 +13,12 @@
 </head>
 <body class="home-page" onload="addYear(); if (document.getElementById('greeting')) greeting(new Date().getHours());">
     <div class="container">
+        <!-- Main site navigation -->
         <header class="home-topbar">
             <div class="topbar-left">
                 <button class="menu-btn" onclick="toggleMobileNav(this)" aria-label="Open navigation">&#9776;</button>
                 <a class="brand" href="index.html">
-                    <img id="logo" src="./static/monomuse.png" alt="MonoMuse Museum Logo" />
+                    <img id="logo" src="./static/monomuse.png" alt="Museum logo" />
                     <span class="brand-name">MonoMuse</span>
                 </a>
             </div>
@@ -31,6 +32,7 @@
             </nav>
             <a class="nav_cta" href="views/tickets.html">Buy Tickets</a>
         </header>
+        <!-- Home hero section -->
         <main class="main hero-main">
             <section class="hero-panel">
                 <p class="hero-kicker" id="greeting">Welcome to MonoMuse</p>
@@ -50,6 +52,7 @@
                 <div class="video-frame">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/JG9hZgnPGsQ?si=Xxt2UafgBu_HUirg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
+                <p class="media-source">Video source: <a href="https://www.youtube.com/watch?v=JG9hZgnPGsQ" target="_blank">YouTube</a></p>
             </section>
         </main>
         <footer class="footer">

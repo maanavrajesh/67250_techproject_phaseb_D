@@ -42,6 +42,7 @@ function ActiveNav() {
 
 ActiveNav();
 
+// This opens and closes the mobile menu.
 function toggleMobileNav(button) {
     const header = button.parentElement.parentElement;
     const nav = header.querySelector('.nav_bar');
@@ -60,15 +61,16 @@ function loadSelectedDate() {
     if (!selectedDate) return;
 
     const params = new URLSearchParams(window.location.search);
-    const date = params.get('date');
+    const pickedDate = params.get('date');
 
-    if (date) {
-        selectedDate.value = date;
+    if (pickedDate) {
+        selectedDate.value = pickedDate;
     }
 
     updateTotal();
 }
 
+// The explore page map only loads if the map div exists.
 function loadMap() {
     const mapElement = document.getElementById('map');
     if (!mapElement || typeof L === 'undefined') return;
@@ -95,6 +97,7 @@ function updateTotal() {
     totalCost.textContent = '$' + total;
 }
 
+// Simple form validation for the checkout page.
 function showError(id, message) {
     const errorEl = document.getElementById(id);
     if (errorEl) {
@@ -113,7 +116,7 @@ function submitPurchase() {
     clearErrors();
 
     const name = document.getElementById('name');
-    const selectedDate = document.getElementById('selectedDate');
+    const visitDate = document.getElementById('selectedDate');
     const ticketType = document.getElementById('ticketType');
     const quantity = document.getElementById('quantity');
     const email = document.getElementById('email');
@@ -127,7 +130,7 @@ function submitPurchase() {
         valid = false;
     }
 
-    if (!selectedDate.value) {
+    if (!visitDate.value) {
         showError('dateError', 'Please choose a visit date.');
         valid = false;
     }
@@ -163,7 +166,7 @@ function submitPurchase() {
     const total = qty * 18;
     const params = new URLSearchParams({
         name: name.value.trim(),
-        date: selectedDate.value,
+        date: visitDate.value,
         type: ticketType.value,
         quantity: qty,
         total: '$' + total,
@@ -179,12 +182,28 @@ function loadConfirmation() {
 
     const params = new URLSearchParams(window.location.search);
     const name = params.get('name') || 'Guest';
+    const visitDate = params.get('date') || '';
+    const ticketType = params.get('type') || '';
+    const quantity = params.get('quantity') || '';
+    const total = params.get('total') || '';
 
     confirmationMessage.textContent = 'Thank you, ' + name + '. Your order has been confirmed.';
-    document.getElementById('confirmDate').textContent = params.get('date') || '';
-    document.getElementById('confirmType').textContent = params.get('type') || '';
-    document.getElementById('confirmQuantity').textContent = params.get('quantity') || '';
-    document.getElementById('confirmTotal').textContent = params.get('total') || '';
+    document.getElementById('confirmDate').textContent = visitDate;
+    document.getElementById('confirmType').textContent = ticketType;
+    document.getElementById('confirmQuantity').textContent = quantity;
+    document.getElementById('confirmTotal').textContent = total;
+}
+
+// This is a small DOM interaction for the explore page.
+function loadFactButton() {
+    const factButton = document.getElementById('factButton');
+    const factText = document.getElementById('factText');
+
+    if (!factButton || !factText) return;
+
+    factButton.addEventListener('click', function () {
+        factText.textContent = 'Museum fact: museums collect, protect, and share objects that tell stories about people and culture.';
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -208,4 +227,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadMap();
     updateTotal();
+    loadFactButton();
+});
+
+// This is a simple jQuery accordion for the explore page.
+$(document).ready(function () {
+    $('#exploreAccordionBtn').click(function () {
+        $('.accordion-panel').slideToggle();
+    });
 });
