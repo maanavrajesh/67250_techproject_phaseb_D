@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Maanav Rajesh">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets - MonoMuse</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="navselected" href="tickets.html">Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>General</td>
+                <td>Standard admission ticket for adults</td>
+                <td>$20</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Discounted ticket for students with valid ID</td>
+                <td>$15</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Special rate for museum members</td>
+                <td>$10</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer>
+        <p id="copyYear"></p>
+        <p>MonoMuse. All rights reserved.</p>
+    </footer>
+</body>
+</html>

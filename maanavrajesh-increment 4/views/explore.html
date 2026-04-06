@@ -4,19 +4,26 @@
     <meta name="author" content="Maanav Rajesh">
     <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
     <meta name="description" content="MonoMuse website redesign project">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore - MonoMuse</title>
     <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
 </head>
-<body>
-    <h1>Explore</h1>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="explore.html">Explore</a>
-        <a href="exhibitions.html">Exhibitions</a>
-        <a href="tickets.html">Buy Tickets</a>
-        <a href="checkout.html">Checkout</a>
-    </nav>
-    <h3>Mission Statement</h3>
+<body onload="addYear()">
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/monomuse.png" alt="MonoMuse Museum Logo" />
+        </header>
+        <nav class="nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+        <main class="main">
+        <h3>Mission Statement</h3>
     <p>
         MonoMuse is a contemporary museum dedicated to exploring the intersection of 
         art, technology, and human creativity. Through immersive exhibitions, 
@@ -30,15 +37,19 @@
 
     <h3>Milestones</h3>
 
-    <img src="../static/Interior-National-Gallery-of-Art-Washington-DC.webp" alt="Museum Interior">
-
     <ul>
         <li>2026: Expansion of the museum space and launch of international artist collaborations.</li>
         <li>2018: Launch of the Interactive Media Lab, allowing visitors to experiment with creative coding.</li>
         <li>2016: MonoMuse opens its doors with first exhibition "Digital Dreams: Art in the Age of Technology."</li>
     </ul>
-    <footer>
-        <p>&copy; 2026 MonoMuse. All rights reserved.</p>
-    </footer>
+        </main>
+        <figure class="main_figure">
+            <img src="../static/Interior-National-Gallery-of-Art-Washington-DC.webp" alt="Museum Interior">
+        </figure>
+        <footer class="footer">
+            <p id="copyYear"></p>
+            <p>MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>

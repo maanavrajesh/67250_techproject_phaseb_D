@@ -1,0 +1,165 @@
+* {
+  padding: 5px;
+  margin: 5px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+#logo {
+  width: 18%;
+  display: block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+
+nav a:hover {
+  border-color: #4d5c3b;
+  }
+
+.active {
+  color:#92ad70;    
+}
+
+footer {
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(36, 36, 140, 0.72);
+  }
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #d4c2c2;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #5e3a3a;
+}
+
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;   /* Right aligns the content */
+}
+.main {
+  grid-area: main; 
+}
+.main_figure {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+/* Read More / Read Less Button Styling */
+#readMore, #readLess {
+  background-color: #92ad70;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#readMore:hover, #readLess:hover {
+  background-color: #7a9159;
+}
+
+/* Buy Tickets Button Styling */
+.buyNowBtn {
+  background-color: #92ad70;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.buyNowBtn:hover {
+  background-color: #7a9159;
+}
+
+/* Purchase Form Styling */
+#purchaseForm {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+#purchaseForm label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+#purchaseForm input,
+#purchaseForm select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#purchaseForm button {
+  background-color: #92ad70;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+#purchaseForm button:hover {
+  background-color: #7a9159;
+}
+
+
