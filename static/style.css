@@ -286,9 +286,14 @@ h3 {
   letter-spacing: 0.08em;
 }
 
-.hero-btn-solid {
+.hero-btn-solid,
+.accordion-btn,
+.fact-btn {
   background-color: var(--light);
   color: var(--text-dark);
+}
+
+.hero-btn-solid {
   border-color: var(--light);
 }
 

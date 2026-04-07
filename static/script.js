@@ -16,29 +16,21 @@ function greeting(h) {
 function addYear() {
     const copyYearEl = document.getElementById('copyYear');
     if (!copyYearEl) return;
-    copyYearEl.innerHTML = new Date().getFullYear();
+    copyYearEl.textContent = new Date().getFullYear();
 }
-
-const now = new Date();
-const hour = now.getHours();
-if (document.getElementById('greeting')) {
-    greeting(hour);
-}
-
 
 function ActiveNav() {
     const navLinks = document.querySelectorAll('.nav_bar a');
+    const currentPath = window.location.pathname;
 
     navLinks.forEach(link => {
-        
-        if (window.location.href === link.href || 
-            window.location.pathname.includes(link.getAttribute('href'))) {
-            
+        const linkPath = link.getAttribute('href');
+
+        if (window.location.href === link.href || currentPath.includes(linkPath)) {
             link.classList.add("active");
         }
     });
 }
-
 
 ActiveNav();
 
